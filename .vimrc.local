@@ -1,0 +1,5 @@
+augroup filetype_lua
+    autocmd!
+    autocmd BufWritePre *.lua %s/\s\+$//e
+    autocmd FileType lua let b:ale_linters={'lua':['luac']}
+augroup END
